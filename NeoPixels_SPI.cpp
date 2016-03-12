@@ -21,7 +21,7 @@
 
   HOW TO USE
 
-    ledSetup ();         - Get ready to send.
+    ledsetup ();         - Get ready to send.
                            Call once at the beginning of the program.
 
     sendPixel (r, g, b); - Send a single pixel to the string.
@@ -35,7 +35,7 @@
                                   This automatically turns interrupts off, so you don't need to do it.
 
     Note that if you are sending individual pixels (with sendPixel) you should first call
-    noInterrupts() send all the pixels you need, and then call interrupts(). Otherwise a timer or
+    noInterrupts(), send all the pixels you need, and then call interrupts(). Otherwise a timer or
     other interrupt may pause the sending long enough for the string to reset.
 
     For example:
