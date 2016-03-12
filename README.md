@@ -55,3 +55,9 @@ For example:
     interrupts ();            // interrupts are OK now
     show ();                  // latch the colours
 ```
+
+---
+
+## More information
+
+The forum post [Simple method for using NeoPixels](http://www.gammon.com.au/forum/?id=13357) has a lot of details and explanations.
