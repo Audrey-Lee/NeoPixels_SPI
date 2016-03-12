@@ -77,6 +77,9 @@ void ledsetup()
   SPI.setClockDivider (SPI_CLOCK_DIV2);
   SPI.setBitOrder (MSBFIRST);
   SPI.setDataMode (SPI_MODE1);   // MOSI normally low.
+  show ();                       // in case MOSI went high, latch in whatever-we-sent
+  sendPixel (0, 0, 0);           // now change back to black
+  show ();                       // and latch that
 }  // end of ledsetup
 
 void sendPixel (const byte r, const byte g, const byte b)
@@ -96,7 +99,7 @@ void show()
 void showColor (const unsigned int count, const byte r , const byte g , const byte b)
   {
   noInterrupts ();
-  for (unsigned int p = 0; p < count; p++)
+  for (unsigned int pixel = 0; pixel < count; pixel++)
     sendPixel (r, g, b);
   interrupts ();
   show ();  // latch the colours
