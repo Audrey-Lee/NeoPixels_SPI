@@ -1,6 +1,6 @@
 #include <SPI.h>
-void sendByte (byte b);
+void sendByte (char b);
 void ledsetup();
-void sendPixel (const byte r, const byte g, const byte b);
+void sendPixel (const char r, const char g, const char b);
 void show();
-void showColor (const unsigned int count, const byte r , const byte g , const byte b);
+void showColor (const unsigned int count, const char r , const char g , const char b);
