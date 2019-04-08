@@ -53,6 +53,7 @@
  */
 
 #include <SPI.h>
+#include <msp432.h>
 #include <NeoPixels_SPI.h>
 
 // Note: Connect NeoPixels to MOSI (pin D11 on a Uno, pin D51 on a Mega)
